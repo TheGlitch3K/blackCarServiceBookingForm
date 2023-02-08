@@ -1,0 +1,9 @@
+{
+  "mysql": {
+    "host": "localhost",
+    "user": "bookings",
+    "password": "bcsbooking",
+    "database": "bookings"
+  },
+  "maps_api_key": "YOUR_API_KEY"
+}

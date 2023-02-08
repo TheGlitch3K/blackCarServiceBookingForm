@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form action="/booking" method="POST">
+      <!-- First and Last Name -->
+      <label for="first_name">First Name</label>
+      <input type="text" name="first_name" id="first_name" />
+      <br />
+      <label for="last_name">Last Name</label>
+      <input type="text" name="last_name" id="last_name" />
+      <br />
+      <!-- Email -->
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" />
+      <br />
+      <!-- Phone Number -->
+      <label for="phone_number">Phone Number</label>
+      <input type="tel" name="phone_number" id="phone_number" />
+      <br />
+      <!-- Ride Date and Time -->
+      <label for="ride_date">Ride Date</label>
+      <input type="date" name="ride_date" id="ride_date" />
+      <br />
+      <label for="pickup_time">Pickup Time</label>
+      <input type="time" name="pickup_time" id="pickup_time" />
+      <br />
+      <label for="pickup_location">Pickup Location</label>
+      <input type="text" name="pickup_location" id="pickup_location" />
+      <br />
+      <label for="dropoff_location">Dropoff Location</label>
+      <input type="text" name="dropoff_location" id="dropoff_location" />
+      <br />
+      <label for="number_of_passengers">Number of Passengers</label>
+      <input
+        type="number"
+        name="number_of_passengers"
+        id="number_of_passengers"
+      />
+      <br />
+      <label for="luggage">Luggage</label>
+      <select name="luggage" id="luggage">
+        <option value="none">None</option>
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+      </select>
+      <br />
+      <label for="vehicle_type">Vehicle Type</label>
+      <select name="vehicle_type" id="vehicle_type">
+        <option value="Escalade ESV Suv">Escalade ESV Suv</option>
+        <option value="Suburban SUV">Suburban SUV</option>
+        <option value="Mercedes Benz S Class">Mercedes Benz S Class</option>
+        <option value="Cadillac CT6 Sedan">Cadillac CT6 Sedan</option>
+      </select>
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
