@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <h1>Contact Form</h1>
+    <% if (typeof success !== "undefined") { %>
+
+    <div><%= success %></div>
+    <% } %> <% if (typeof error !== "undefined") { %>
+
+    <div><%= error %></div>
+    <% } %>
+    <form action="/contact" method="post">
+      <label>Name:</label>
+      <input type="text" name="name" required /><br />
+      <label>Email:</label>
+      <input type="email" name="email" required /><br />
+      <label>Subject:</label>
+      <input type="text" name="subject" required /><br />
+      <label>Message:</label>
+      <textarea name="message" rows="5" required></textarea><br />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

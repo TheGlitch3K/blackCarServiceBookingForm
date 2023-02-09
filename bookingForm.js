@@ -27,7 +27,7 @@ async function handleBookingForm(req, res) {
   var formattedCost = cost.toFixed(2);
   console.log("Total Cost: $" + formattedCost);
 
-  // Format the pickup time in the correct format
+  // Format the pickup time in "standard" format
   const pickupTime = new Date(`${date} ${pickup_time}`).toLocaleTimeString(
     "en-US",
     {
@@ -37,13 +37,14 @@ async function handleBookingForm(req, res) {
     }
   );
 
-  // Format the date in the correct format
+  // Format the date in the "standard"
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
   });
 
+  // Insert the booking into the database
   const connection = getConnection();
   connection.query(
     `INSERT INTO bookings (first_name, last_name, email, phone_number, date, pickup_time, pickup_location, dropoff_location, number_of_passengers, luggage, vehicle_type, cost) VALUES ('${first_name}','${last_name}', '${email}', '${phone_number}', '${date}', '${pickup_time}', '${pickup_location}', '${dropoff_location}', '${number_of_passengers}', '${luggage}', '${vehicle_type}', '${formattedCost}')`,
